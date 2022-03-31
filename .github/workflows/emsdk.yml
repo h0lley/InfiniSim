@@ -57,7 +57,7 @@ jobs:
 
       - name: Build simulator executable
         run:  |
-          cmake --build build_lv_sim
+          cmake --build build_em
 
       - name: Upload simulator executable
         uses: actions/upload-artifact@v3
