@@ -1,4 +1,4 @@
-name: Build InfiniSim LVGL Simulator using emscripten
+name: Emscripten build InfiniSim LVGL Simulator
   # Run on all branches
   push:
     branches: []
