@@ -70,7 +70,6 @@ jobs:
 
       - name: Prepare Github Page
         shell: bash
-        if: contains(matrix.config.name, 'emscripten')
         run: |
           mkdir emscripten
           mv build_em/infinisim.html \
