@@ -1,4 +1,7 @@
 name: Emscripten build InfiniSim LVGL Simulator
+
+# When to run this Workflow...
+on:
   # Run on all branches
   push:
     branches: []
