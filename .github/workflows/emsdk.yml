@@ -29,7 +29,7 @@ jobs:
           actions-cache-folder: 'emsdk-cache'
         
       - name: Tell emsdk to use SDL with pthread proxy fix
-        run: sed -i -e "s/^TAG =.*/TAG = 'ea7d5307acfb1daf9af6104b60b75114b15bcd27'/" -e "s/HASH =.*/HASH = 'b7d58124f0d1145f23338abfdb6aa07855ac74ed80b3a5b613d23b4930c84d04d1794a62aab2ca2680ba369128ee2028ea51236fab4aaf70556036172fa59e6a'/" emsdk-cache/upstream/emscripten/tools/ports/sdl2.py
+        run: sed -i -e "s/^TAG =.*/TAG = 'ea7d5307acfb1daf9af6104b60b75114b15bcd27'/" -e "s/HASH =.*/HASH = 'b7d58124f0d1145f23338abfdb6aa07855ac74ed80b3a5b613d23b4930c84d04d1794a62aab2ca2680ba369128ee2028ea51236fab4aaf70556036172fa59e6a'/" ${EMSDK}/upstream/emscripten/tools/ports/sdl2.py
 
       - name: Verify
         run: emcc -v
