@@ -169,6 +169,8 @@ file(GLOB InfiniTime_SCREENS
   "${InfiniTime_DIR}/src/displayapp/screens/*.cpp"
   "${InfiniTime_DIR}/src/displayapp/screens/settings/*.h"
   "${InfiniTime_DIR}/src/displayapp/screens/settings/*.cpp"
+  "${InfiniTime_DIR}/src/displayapp/screens/holly/*.h"
+  "${InfiniTime_DIR}/src/displayapp/screens/holly/*.cpp"
 )
 file(GLOB InfiniTime_FONTS
   "${InfiniTime_DIR}/src/displayapp/fonts/*.c"
@@ -198,6 +200,8 @@ target_sources(infinisim PUBLIC
   ${InfiniTime_DIR}/src/buttonhandler/ButtonHandler.cpp
   ${InfiniTime_DIR}/src/components/alarm/AlarmController.h
   ${InfiniTime_DIR}/src/components/alarm/AlarmController.cpp
+  ${InfiniTime_DIR}/src/components/holly/ReminderController.h
+  ${InfiniTime_DIR}/src/components/holly/ReminderController.cpp
   ${InfiniTime_DIR}/src/components/ble/BleController.h
   ${InfiniTime_DIR}/src/components/ble/BleController.cpp
   ${InfiniTime_DIR}/src/components/datetime/DateTimeController.h
