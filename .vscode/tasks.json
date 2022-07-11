@@ -1,0 +1,39 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Start sim",
+            "group": "test",
+            "type": "shell",
+            "command": "./build/infinisim",
+            "problemMatcher": []
+        },
+        {
+            "label": "Compile sim",
+            "group": "build",
+            "type": "shell",
+            "command": "cmake -S . -B build -DInfiniTime_DIR=../InfiniTime && cmake --build build -j4",
+            "problemMatcher": []
+        },
+        {
+            "label": "Compile & start sim",
+            "group": "build",
+            "type": "shell",
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "Compile sim",
+                "Start sim"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "Compile for use",
+            "group": "build",
+            "type": "shell",
+            "command": "cd ../InfiniTime/build && cmake -DARM_NONE_EABI_TOOLCHAIN_PATH='/home/holly/Projects/GADGETS/Pine/Time/build-tools/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi' -DNRF5_SDK_PATH='/home/holly/Projects/GADGETS/Pine/Time/build-tools/nRF5_SDK_15.3.0_59ac345' -DCMAKE_BUILD_TYPE=Release -DBUILD_DFU=1 ../ && make -j pinetime-mcuboot-app",
+            "problemMatcher": []
+        }
+    ]
+}
