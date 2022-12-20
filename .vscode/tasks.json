@@ -32,7 +32,7 @@
             "label": "Compile for use",
             "group": "build",
             "type": "shell",
-            "command": "cd ../InfiniTime/build && cmake -DARM_NONE_EABI_TOOLCHAIN_PATH='/home/holly/Projects/GADGETS/Pine/Time/build-tools/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi' -DNRF5_SDK_PATH='/home/holly/Projects/GADGETS/Pine/Time/build-tools/nRF5_SDK_15.3.0_59ac345' -DCMAKE_BUILD_TYPE=Release -DBUILD_DFU=1 ../ && make -j pinetime-mcuboot-app",
+            "command": "cd ../InfiniTime/build && cmake -DARM_NONE_EABI_TOOLCHAIN_PATH='/home/holly/Projects/Pine/Time/build-tools/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi' -DNRF5_SDK_PATH='/home/holly/Projects/Pine/Time/build-tools/nRF5_SDK_15.3.0_59ac345' -DCMAKE_BUILD_TYPE=Release -DBUILD_DFU=1 -B . -S .. && make -j pinetime-mcuboot-app",
             "problemMatcher": []
         }
     ]
